@@ -1,0 +1,90 @@
+package Labsheets;
+
+import java.util.Scanner;
+
+public class Coverter {
+	
+	public static void currency(double cr){
+		Scanner s=new Scanner(System.in);
+		System.out.println("Choose the conversion: "+"\n"+"1.Dollar to rupee"+"\n"+"2.Rupee to dollar"+
+				"\n"+"3.Euro to rupee"+"\n"+"4.Rupee to euro"+"\n"+"5.Yen to rupee"+
+				"\n"+"6.rupee to yen");
+		
+		int b=s.nextInt();
+		switch(b) {
+		case 1: System.out.println(cr*178);
+		break;
+		case 2:System.out.println(cr/178);
+		break;
+		case 3:System.out.println(cr*196);
+		break;
+		case 4:System.out.println(cr/196);
+		break;
+		case 5:System.out.println(cr*1.68);
+		break;
+		case 6:System.out.println(cr/1.68);
+		break;
+		default:System.out.println("Wrong input");
+		}
+	}
+		public static void distance(double d){
+			Scanner s=new Scanner(System.in);
+			System.out.println("Choose the conversion: "+"\n"+"1.Meter to kilometer"+"\n"+"2.Kilometer to meter"+
+					"\n"+"3.Miles to kilometer"+"\n"+"4.Kilometer to miles");
+			int e=s.nextInt();
+			switch(e) {
+			case 1: System.out.println(d/1000);
+			break;
+			case 2:System.out.println(d*1000);
+			break;
+			case 3:System.out.println(d*1.6);
+			break;
+			case 4:System.out.println(d/1.6);
+			break;
+			default:System.out.println("Wrong input");
+			}
+		}
+		public static void time(double t){
+			Scanner s=new Scanner(System.in);
+			System.out.println("Choose the conversion: "+"\n"+"1.Hours to minutes"+"\n"+"2.Minutes to hours"+
+					"\n"+"3.Hours to seconds"+"\n"+"4.Seconds to hours");
+			int f=s.nextInt();
+			switch(f) {
+			case 1: System.out.println(t*60);
+			break;
+			case 2:System.out.println(t/60);
+			break;
+			case 3:System.out.println(t*3600);
+			break;
+			case 4:System.out.println(t/3600);
+			break;
+			default:System.out.println("Wrong input");
+			}
+		}
+	
+	
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+			System.out.println("Choose the converter: "+"\n"+"1.Currency Converter"+"\n"+"2.Distance Converter"+
+					"\n"+"3.Time Converter");
+			int a=s.nextInt();
+			if(a==1) {
+				System.out.println("Enter amount: ");
+				double c=s.nextDouble();
+				currency(c);
+			}
+			
+			if(a==2) {
+				System.out.println("Enter distance: ");
+				double d=s.nextDouble();
+				distance(d);
+			}
+			if(a==3) {
+					System.out.println("Enter distance: ");
+					double t=s.nextDouble();
+					time(t);
+			
+	}
+
+	}
+}
